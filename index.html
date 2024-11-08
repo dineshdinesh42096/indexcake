@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgb(0, 0, 35);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+.input-group input:focus {
+    background: #fff;
+    border-color: #4c4cfd;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    font-size: 14px;
+    color: #aaa;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -8px;
+    font-size: 12px;
+    color: #4c4cfd;
+    background: #fff;
+    padding: 0 4px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.actions button {
+    background: #4c4cfd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.actions button:hover {
+    background: #3a3ab4;
+}
+
+.actions .forgot-password {
+    color: #4c4cfd;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.actions .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.sign-up {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #666;
+}
+
+.sign-up a {
+    color: #4c4cfd;
+    text-decoration: none;
+}
+
+.sign-up a:hover {
+    text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form>
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="actions">
+                    <button type="submit"><a href="home.html" style="text-decoration: none; color: white;">Login</a></button>
+                    <a href="forgot.html" class="forgot-password">Forgot Password?</a>
+                </div>
+                <p class="sign-up">Don't have an account? <a href="signin.html">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
